@@ -1,9 +1,10 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addBook, removeBook } from '../redux/books/booksSlice';
-import Book from '../Book';
 import Form from '../Form';
+import BookList from '../BookList';
+import AddBookButton from '../AddBookButton';
 
 function Books() {
   const books = useSelector((state) => state.books.books);
@@ -14,22 +15,12 @@ function Books() {
     dispatch(addBook({ id, title, author }));
   };
 
-  const handleRemove = (id) => {
-    dispatch(removeBook(id));
-  };
-
   return (
     <div>
       <h2>Books</h2>
-      {books.map((book) => (
-        <Book
-          key={book.id}
-          title={book.title}
-          author={book.author}
-          onRemove={() => handleRemove(book.id)}
-        />
-      ))}
+      <BookList books={books} onRemove={(id) => dispatch(removeBook(id))} />
       <Form onSubmit={handleSubmit} />
+      <AddBookButton />
     </div>
   );
 }

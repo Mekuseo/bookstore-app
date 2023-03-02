@@ -5,7 +5,7 @@ function Book(props) {
     <div className="input">
       <h3>{props.title}</h3>
       <p>{props.author}</p>
-      <button type="submit">Remove</button>
+      <button type="submit" onClick={props.onRemove}>Remove</button>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -8,7 +9,6 @@ import Book from './Book';
 function BookList({ books, onRemove }) {
   const dispatch = useDispatch();
 
-  // eslint-disable-next-line no-unused-vars
   const handleRemove = (id) => {
     dispatch(removeBook(id));
   };
@@ -18,9 +18,10 @@ function BookList({ books, onRemove }) {
       {books.map((book) => (
         <Book
           key={book.id}
+          id={book.id}
           title={book.title}
           author={book.author}
-          onRemove={onRemove}
+          onRemove={handleRemove}
         />
       ))}
     </div>

@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { addBook, removeBook } from '../redux/books/booksSlice';
 import Form from '../Form';
@@ -15,12 +16,17 @@ function Books() {
     dispatch(addBook({ id, title, author }));
   };
 
+  const handleRemove = (id) => {
+    dispatch(removeBook(id));
+  };
+
   return (
     <div>
       <h2>Books</h2>
-      <BookList books={books} onRemove={(id) => dispatch(removeBook(id))} />
+      <BookList books={books} onRemove={handleRemove} />
       <Form onSubmit={handleSubmit} />
       <AddBookButton />
+      <Button onClick={() => handleRemove(books[0].id)}>Remove first book</Button>
     </div>
   );
 }

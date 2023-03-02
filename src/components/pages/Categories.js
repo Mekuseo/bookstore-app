@@ -18,7 +18,9 @@ function Categories() {
         Status:
         {status}
       </p>
-      <button type="button" onClick={handleCheckStatus}>Check status</button>
+      <button type="button" onClick={handleCheckStatus}>
+        Check status
+      </button>
     </div>
   );
 }

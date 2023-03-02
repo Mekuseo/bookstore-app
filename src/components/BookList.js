@@ -15,7 +15,7 @@ function BookList({ books, onRemove }) {
 
   return (
     <div>
-      {books.map((book) => (
+      {Array.isArray(books) && books.map((book) => (
         <Book
           key={book.id}
           id={book.id}

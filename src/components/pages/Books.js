@@ -1,15 +1,18 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React from 'react';
-import Button from 'react-bootstrap/Button';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addBook, removeBook } from '../redux/books/booksSlice';
+import { addBook, removeBook, fetchBooksAsync } from '../redux/books/booksSlice';
 import Form from '../Form';
 import BookList from '../BookList';
 import AddBookButton from '../AddBookButton';
 
 function Books() {
-  const books = useSelector((state) => state.books.books);
+  const books = useSelector((state) => state.books.books) || [];
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooksAsync());
+  }, [dispatch]);
 
   const handleSubmit = (title, author) => {
     const id = Math.floor(Math.random() * 100000);
@@ -26,7 +29,6 @@ function Books() {
       <BookList books={books} onRemove={handleRemove} />
       <Form onSubmit={handleSubmit} />
       <AddBookButton />
-      <Button onClick={() => handleRemove(books[0].id)}>Remove first book</Button>
     </div>
   );
 }

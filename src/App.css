@@ -17,7 +17,7 @@ body {
 }
 
 .nave-bar {
-  max-width: 1200px;
+  width: 100%;
   display: flex;
   padding: 20px;
   justify-content: space-between;
@@ -61,6 +61,10 @@ body {
   opacity: 1;
 }
 
+.svg-inline--fa {
+  color: #0290FF
+}
+
 .user {
   border: 1px solid #e8e8e8;
   border-radius: 50%;
@@ -80,7 +84,7 @@ body {
 }
 
 .books {
-  width: 95%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -156,6 +160,13 @@ body {
 
 hr {
   border: 1px solid #e8e8e8;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.add-new-book {
+  margin: 0 auto;
+  width: 75%;
 }
 
 .add-new-book h1 {

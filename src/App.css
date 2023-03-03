@@ -5,13 +5,13 @@
 
 body {
   font-family: 'Times New Roman', Times, serif;
-  background-color: #F3F4F8;
+  background-color: #f3f4f8;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #FFFFFF;
+  background-color: #fff;
   margin-top: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -22,8 +22,8 @@ body {
   padding: 20px;
   justify-content: space-between;
   align-items: center;
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #E8E8E8;
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -40,7 +40,7 @@ body {
 .nav-item h1 {
   font-size: 30px;
   font-weight: 700;
-  color: #0290FF;
+  color: #0290ff;
 }
 
 .nav-link {
@@ -62,12 +62,12 @@ body {
 }
 
 .user {
-  border: 1px solid #E8E8E8;
+  border: 1px solid #e8e8e8;
   border-radius: 50%;
   padding: 10px;
   transition: all 0.3s ease;
   outline: none;
-  background-color: #FFFFFF;
+  background-color: #fff;
   cursor: pointer;
 }
 
@@ -96,8 +96,8 @@ body {
   justify-content: space-between;
   gap: 20px;
   padding: 20px;
-  background-color: #FFFFFF;
-  border: 1px solid #E8E8E8;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -130,7 +130,7 @@ body {
 .book-detail p {
   font-size: 0.875rem;
   font-weight: 300;
-  color: #4386BF;
+  color: #4386bf;
 }
 
 .btn-status {
@@ -139,8 +139,6 @@ body {
   align-items: flex-start;
   padding: 10px;
 }
-
-
 
 .btn-status button {
   background: #fff;

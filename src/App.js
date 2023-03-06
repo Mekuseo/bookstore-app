@@ -1,21 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Books from './components/pages/Books';
-import Categories from './components/pages/Categories';
-import NavBar from './components/NavBar';
+import Books from './components/Books';
+import Categories from './components/Categories';
+import Links from './components/Links';
 
-function App() {
-  return (
+const App = () => (
+  <div>
     <Router>
-      <div>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Books />} />
-          <Route path="/categories" element={<Categories />} />
-        </Routes>
-      </div>
+      <Links />
+      <Routes>
+        <Route path="/" element={<Books />} />
+        <Route path="categories" element={<Categories />} />
+      </Routes>
     </Router>
-  );
-}
+  </div>
+);
 
 export default App;

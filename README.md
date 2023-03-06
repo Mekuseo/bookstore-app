@@ -1,5 +1,9 @@
 <a name="readme-top"></a>
-
+<div align="center">
+  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+  <img src='./src/assets/screenshot.png' alt="screenshot" width="140"  height="auto" />
+  <br/>
+</div>
 <!--
 HOW TO USE:
 This is an example of how you may give instructions on setting up your project locally.
